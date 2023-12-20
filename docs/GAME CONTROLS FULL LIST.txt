@@ -1,0 +1,93 @@
+NOTE: 	This file lists ONLY the default key controls - for alternate keys activated by the options, please
+		refer to the notes in the mod's INI file
+
+Setup 1:
+	ON FOOT:
+		- Left analog stick - Movement/Move crosshair
+		- Right analog stick - Look around
+		- Circle / B - Fire
+		- Cross / A - Sprint
+		- Square / X - Jump
+		- Triangle / Y - Enter vehicle
+		- Select / Back - Next camera/Toggle replay (hold)
+		- Start - Pause menu
+		- L1 / LB - Answer phone/Center camera/Collect pick-up/Show stats/Secondary Fire
+		- R1 / RB - Target
+		- L2 / LT - Previous target/Previous weapon/Sniper zoom out
+		- R2 / RT - Next target/Next weapon/Sniper zoom in
+		- L2 / LT + R2 / RT - Reload weapon
+		- L3 / LS - Duck
+		- R3 / RS - Look behind
+		- D-Pad Up - Gang control Forward
+		- D-Pad Down - Gang control Back
+		- D-Pad Left - Conversation No
+		- D-Pad Right - Conversation Yes
+		- Home / Guide - Show Steam Overlay (if available and GuideLaunchesOverlay enabled)
+
+	IN VEHICLE:
+		- Left analog stick - Steer
+		- Right analog stick - Move turret/Look around
+		- Circle / B - Fire
+		- Cross / A - Accelerate
+		- Square / X - Brake
+		- Triangle / Y - Exit vehicle
+		- Select / Back - Next camera/Toggle replay (hold)
+		- Start - Pause menu
+		- L1 / LB - Secondary Fire
+		- R1 / RB - Handbrake
+		- L2 / LT - Look left
+		- R2 / RT - Look right
+		- L2 / LT + R2 / RT - Look behind
+		- L3 / LS - Horn
+		- R3 / RS - Sub-mission/Hydraulics jump
+		- D-Pad Up - Next radio station/Next MP3 Track (hold)
+		- D-Pad Down - Previous radio station/Previous MP3 Track (hold)
+		- D-Pad Left - Conversation No
+		- D-Pad Right - Conversation Yes
+		- Home / Guide - Show Steam Overlay (if available and GuideLaunchesOverlay enabled)
+
+
+Setup 2 - GTA IV styled controls:
+	ON FOOT:
+		- Left analog stick - Movement/Sniper zoom
+		- Right analog stick - Look around/Move crosshair
+		- D-Pad Left - Previous weapon
+		- D-Pad Right - Next weapon
+		- Circle / B - Melee attack/Reload weapon
+		- Cross / A - Sprint
+		- Square / X - Jump
+		- Triangle / Y - Enter vehicle
+		- Select / Back - Next camera/Toggle replay (hold)
+		- Start - Pause menu
+		- L1 / LB - Answer phone/Collect pick-up/Show stats/Previous target
+		- R1 / RB - Center camera/Next target
+		- L2 / LT - Target
+		- R2 / RT - Fire
+		- L3 / LS - Duck
+		- R3 / RS - Look behind
+		- D-Pad Up - Conversation No
+		- D-Pad Down - Conversation Yes
+		- Cross / A + D-Pad Up - Gang control Forward
+		- Cross / A + D-Pad Down - Gang control Back
+		- Home / Guide - Show Steam Overlay (if available and GuideLaunchesOverlay enabled)
+
+	IN VEHICLE:
+		- Left analog stick - Steer
+		- Right analog stick - Move turret/Look around
+		- D-Pad Left - Previous radio station/Previous MP3 Track (hold)
+		- D-Pad Right - Next radio station/Next MP3 Track (hold)
+		- Cross / A - Handbrake/Secondary Fire
+		- Triangle / Y - Exit vehicle
+		- Select / Back - Next camera/Toggle replay (hold)
+		- Start - Pause menu
+		- Circle / B - Fire
+		- L1 / LB - Look left
+		- R1 / RB - Look Right
+		- L2 / LT + R2 / RT - Look behind
+		- L2 / LT - Brake
+		- R2 / RT - Accelerate
+		- L3 / LS - Horn
+		- R3 / RS - Sub-mission/Hydraulics jump
+		- D-Pad Up - Conversation No
+		- D-Pad Down - Conversation Yes
+		- Home / Guide - Show Steam Overlay (if available and GuideLaunchesOverlay enabled)
