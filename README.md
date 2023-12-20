@@ -1,4 +1,4 @@
-# GTA SAN ANDREAS First Person Mod
+# GTA SAN ANDREAS First Person Mod  🌎
 
 <p align="center">
   <img src="gta_github_logo.jpg" alt="GTA San Andreas Logo">
