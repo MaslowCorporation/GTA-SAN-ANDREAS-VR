@@ -1,7 +1,8 @@
 #ifndef CPPLuaBridge_H
 #define CPPLuaBridge_H
 
-using namespace std;
+// a checker function that checks if the Lua script executed without failure
+#include "../../Dependencies/CheckLua/CheckLua.h"
 
 // Lua is a C library, and we're in C++ land,
 // so we need extern so things work well

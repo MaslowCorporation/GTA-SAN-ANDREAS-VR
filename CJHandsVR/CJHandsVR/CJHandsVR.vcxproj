@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -104,10 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)$(ProjectName)\Dependencies\Lua\liblua54.a;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -128,12 +130,41 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CJHandsVR.cpp" />
-    <ClCompile Include="Dependencies\CheckLua\CheckLua.cpp" />
-    <ClCompile Include="Dependencies\CPPLuaBridge\CPPLuaBridge.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dependencies\CheckLua\CheckLua.h" />
-    <ClInclude Include="Dependencies\CPPLuaBridge\CPPLuaBridge.h" />
+    <None Include="CJHandsVR.lua" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dependencies\LuaBridge\Array.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\CFunctions.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\ClassInfo.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Config.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Constructor.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\dump.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\FuncTraits.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Iterator.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\LuaException.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\LuaHelpers.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\LuaRef.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Namespace.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Security.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Stack.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\TypeList.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\TypeTraits.h" />
+    <ClInclude Include="Dependencies\LuaBridge\detail\Userdata.h" />
+    <ClInclude Include="Dependencies\LuaBridge\List.h" />
+    <ClInclude Include="Dependencies\LuaBridge\LuaBridge.h" />
+    <ClInclude Include="Dependencies\LuaBridge\Map.h" />
+    <ClInclude Include="Dependencies\LuaBridge\Optional.h" />
+    <ClInclude Include="Dependencies\LuaBridge\RefCountedObject.h" />
+    <ClInclude Include="Dependencies\LuaBridge\RefCountedPtr.h" />
+    <ClInclude Include="Dependencies\LuaBridge\UnorderedMap.h" />
+    <ClInclude Include="Dependencies\LuaBridge\Vector.h" />
+    <ClInclude Include="Dependencies\Lua\include\lauxlib.h" />
+    <ClInclude Include="Dependencies\Lua\include\lua.h" />
+    <ClInclude Include="Dependencies\Lua\include\lua.hpp" />
+    <ClInclude Include="Dependencies\Lua\include\luaconf.h" />
+    <ClInclude Include="Dependencies\Lua\include\lualib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

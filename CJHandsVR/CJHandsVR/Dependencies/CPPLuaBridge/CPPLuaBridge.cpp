@@ -1,22 +1,13 @@
 #include "CPPLuaBridge.h"
-#include <iostream>
+//#include <iostream>
 
-// a checker function that checks if the Lua script executed without failure
-#include "../../Dependencies/CheckLua/CheckLua.h"
 
-// Lua is a C library, and we're in C++ land,
-// so we need extern so things work well
-extern "C"
-{
-#include "../../Dependencies/Lua/include/lua.h"
-#include "../../Dependencies/Lua/include/lauxlib.h"
-#include "../../Dependencies/Lua/include/lualib.h"
-}
 
 // Let's create a bridge between C++ land & Lua land.
 int CPPLuaBridge()
 {
 
+    
     // Create a LUA Virtual Machine
     lua_State *L = luaL_newstate();
 
@@ -40,15 +31,17 @@ int CPPLuaBridge()
             float result_in_cpp = (float)lua_tonumber(L, -1);
 
             // print some shizzle on the C++ side
-            std::cout << "a on the C++ side is equal to " << result_in_cpp << std::endl;
+            //std::cout << "a on the C++ side is equal to " << result_in_cpp << std::endl;
         }
     }
 
-    system("pause");
+    // Uncomment this if you're testing this.bridge outside of a UEVR plugin.
+    //system("pause");
 
     // close the LUA VM
     lua_close(L);
+    
 
     // let's return some shizzle
-    return 0;
+    return 3 + 15;
 }

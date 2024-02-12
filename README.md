@@ -152,15 +152,6 @@ Create a file `CheckLua.cpp` and `CheckLua.h` .
 #include "CheckLua.h"
 #include <iostream>
 
-// Lua is a C library, and we're in C++ land,
-// so we need extern so things work well
-extern "C"
-{
-#include "../../Dependencies/Lua/include/lua.h"
-#include "../../Dependencies/Lua/include/lauxlib.h"
-#include "../../Dependencies/Lua/include/lualib.h"
-}
-
 // Little error checking utility function
 bool CheckLua(lua_State *L, int r)
 {
@@ -184,7 +175,7 @@ bool CheckLua(lua_State *L, int r)
 #ifndef CheckLua_H
 #define CheckLua_H
 
-using namespace std;
+#include <string> // Include string header for std::string
 
 // Lua is a C library, and we're in C++ land,
 // so we need extern so things work well
@@ -194,6 +185,7 @@ extern "C"
 #include "../../Dependencies/Lua/include/lauxlib.h"
 #include "../../Dependencies/Lua/include/lualib.h"
 }
+
 
 bool CheckLua(lua_State *L, int r); // Function declaration
 
@@ -262,10 +254,7 @@ int main()
         }
     }
 
-    // this is BAD practice, 
-    // but for the example program purposes,
-    // it maintains  the command line window open 
-    // until a key gets pressed
+    // Uncomment this if you're testing this.bridge outside of a UEVR plugin.
     system("pause");
 
     // close the LUA VM
@@ -358,7 +347,8 @@ int CPPLuaBridge()
         }
     }
 
-    system("pause");
+    // Uncomment this if you're testing this.bridge outside of a UEVR plugin.
+    //system("pause");
 
     // close the LUA VM
     lua_close(L);
@@ -371,10 +361,10 @@ int CPPLuaBridge()
 `CPPLuaBridge.h` contains:
 
 ```
+
 #ifndef CPPLuaBridge_H
 #define CPPLuaBridge_H
 
-using namespace std;
 
 // Lua is a C library, and we're in C++ land,
 // so we need extern so things work well
@@ -399,4 +389,23 @@ https://praydog.github.io/uevr-docs/plugins/getting_started.html
 
 ```
 
-Create a folder `CJHandsVR/CJHandsVR/Dependencies/UEVR` . To fill it , 
+Download the latest `Source code (zip)` file at 
+
+https://github.com/praydog/UEVR/releases
+
+Unzip the file, and locate the folder named `include/uevr` .
+
+Copy/paste this `uevr` folder, to your `CJHandsVR/CJHandsVR/Dependencies` folder, such that there should now be a `CJHandsVR/CJHandsVR/Dependencies/uevr` folder in your project, containing `API.h` , `API.hpp` , and `Plugin.hpp` files.
+
+Add this `CJHandsVR/CJHandsVR/Dependencies/uevr` folder to your project's files, you know the drill by now ;-) . See https://stackoverflow.com/a/12490073 for a quick reminder.
+
+Now, we want to compile a .dll file instead of a .exe file like we did previously.
+
+To do so, Open your CJHandsVR Visual Studio project, then Open `Project/properties` dialog and go to "Configuration Properties/General". On the right side locate the "Configuration Type" item and change it from "Application" to "Dynamic Library".
+
+Then go to `C++/language` and set the `C++ Language Standard` to `ISO C++17`
+
+Once you've done all this, press `CTRL + B` to build your UEVR plugin into a .dll file. If everything is OK, your .dll file will be located in `CJHandsVR\x64\Debug\CJHandsVR.dll` !
+
+
+

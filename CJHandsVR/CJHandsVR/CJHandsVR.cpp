@@ -3,20 +3,9 @@
 #include <iostream>
 #include <memory>
 
-// a bridge between 2 lands
-#include "Dependencies/CPPLuaBridge/CPPLuaBridge.h"
-
-// this pragma is needed for linking the LUA C library to our C++ kingdom
-// This practice seems to be frowned upon, but I followed a tutorial and that's how it's done there,
-// and I don't care about programming norms ,
-// I just want to mod my VR Game thanks to UEVR ;-) .
-// Also, _WIN32 means Windows, it has nothing to do with 32 or 64 bit stuff
-#ifdef _WIN32
-#pragma comment(lib, "Dependencies/Lua/liblua54.a")
-#endif
 
 // the UEVR C++ API
-#include "uevr/Plugin.hpp"
+#include "Dependencies/uevr/Plugin.hpp"
 
 using namespace uevr;
 
@@ -39,12 +28,12 @@ public:
 
     void on_initialize() override
     {
+
+
         // Logs to the appdata UnrealVRMod log.txt file
         // API::get()->log_error("%s %s", "Hello", "error");
         // API::get()->log_warn("%s %s", "Hello", "warning");
-        API::get()->log_info("%s %s", "Hello, this is the CJHandsVR plugin !", "info");
-
-        CPPLuaBridge();
+        API::get()->log_info("%s %s", "Salutations, this is the CJHandsVR plugin !", "info");
     }
 
     void on_pre_engine_tick(UEVR_UGameEngineHandle engine, float delta) override
@@ -55,6 +44,7 @@ public:
     void on_post_engine_tick(UEVR_UGameEngineHandle engine, float delta) override
     {
         PLUGIN_LOG_ONCE("Post Engine Tick: %f", delta);
+
     }
 
     void on_pre_slate_draw_window(UEVR_FSlateRHIRendererHandle renderer, UEVR_FViewportInfoHandle viewport_info) override
