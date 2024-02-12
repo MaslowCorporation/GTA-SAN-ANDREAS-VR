@@ -32,7 +32,7 @@ public:
         // this tells you if controllers are used or not
         const auto controllers_used = API::get()->param()->vr->is_using_controllers();
 
-        // Using %s for string representation
+        // Using %d for number representation
         API::get()->log_info("Controllers used: %d", static_cast<int>(controllers_used));
     }
 
@@ -43,11 +43,11 @@ public:
 
     void on_post_engine_tick(UEVR_UGameEngineHandle engine, float delta) override
     {
-        
+
         // this tells you if controllers are used or not
         const auto controllers_used = API::get()->param()->vr->is_using_controllers();
 
-        // Using %s for string representation
+        // Using %d for number representation
         API::get()->log_info("Controllers used: %d", static_cast<int>(controllers_used));
     }
 
