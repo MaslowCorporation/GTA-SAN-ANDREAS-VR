@@ -28,7 +28,6 @@ public:
     {
         // Logs to the appdata UnrealVRMod log.txt file
         API::get()->log_info("%s %s", "Hello, my fellow traveler, this is the CJHandsVR plugin ;-)", "info");
-
     }
 
     void on_pre_engine_tick(UEVR_UGameEngineHandle engine, float delta) override
@@ -36,23 +35,26 @@ public:
         PLUGIN_LOG_ONCE("Pre Engine Tick: %f", delta);
     }
 
-    void on_xinput_get_state(uint32_t* retval, uint32_t user_index, XINPUT_STATE* state)
+    void on_xinput_get_state(uint32_t *retval, uint32_t user_index, XINPUT_STATE *state)
     {
         // this tells you if controllers are used or not
         const auto controllers_used = API::get()->param()->vr->is_using_controllers();
 
         // Using %d for number representation
-        PLUGIN_LOG_ONCE("Controllers used (in tick callback): %d", static_cast<int>(controllers_used));
+        // PLUGIN_LOG_ONCE("Controllers used (in tick callback): %d", static_cast<int>(controllers_used));
+
+        PLUGIN_LOG_ONCE("Hello !!")
     }
 
     void on_post_engine_tick(UEVR_UGameEngineHandle engine, float delta) override
     {
+        PLUGIN_LOG_ONCE("Post Slate Draw Window");
 
         // this tells you if controllers are used or not
-        //const auto controllers_used = API::get()->param()->vr->is_using_controllers();
+        const auto controllers_used = API::get()->param()->vr->is_using_controllers();
 
         // Using %d for number representation
-        //API::get()->log_info("Controllers used: %d", static_cast<int>(controllers_used));
+        PLUGIN_LOG_ONCE("Controllers used: %d", static_cast<int>(controllers_used));
     }
 
     void on_pre_slate_draw_window(UEVR_FSlateRHIRendererHandle renderer, UEVR_FViewportInfoHandle viewport_info) override
