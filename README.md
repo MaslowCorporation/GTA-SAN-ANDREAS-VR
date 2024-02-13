@@ -225,4 +225,45 @@ Launch your game, and inject UEVR in it. Then navigate to the `Plugins/PluginLoa
 
 If everything is OK, your plugin will be loaded and you'll get a success message in your UEVR menu.
 
+You can open the `Open Global Dir` in your UEVR main menu, and access the `SanAndreas/log.txt` file within it, to see the printed logs of your plugin, and other logging data, in case of an error. There's also the `SanAndreas/crash.dmp` file that contains other error logs.
+
+Now, we need a debugger, in order to do any meaningful programming work ;-)
+
+To set breakpoints in your plugin code, do the following:
+
+- Open your game, all the way to the actual game.
+
+- Go to the game menu, and go to `OPTIONS / GRAPHICS / DISPLAY MODE` and choose `Windowed`
+
+- Open `UEVRInjector.exe` as admin.
+
+- Inject to your game.
+
+-  Press both of your controller sticks, or the `Inser` key, to make the UEVR menu appear, if not already on-screen, and Unload your plugin in the `PluginLoader/PluginLoader` menu.
+
+- Open your Visual Studio C++ Plugin project, while your game, and UEVR, are running.
+
+- Add your breakpoints in your plugin's cpp file, by click on the vertical var at the left of your editor code, before the line numbers. When you click at a specific line, a red dot appears. That's the breakpoint. Add breakpoints where needed, to inspect the shizzle.
+
+- Go to `Debug/Attach To Process` , And locate the `Attach to` menu.
+Type `SanAndreas` to locate the SanAndreas.exe process (AKA your game).
+
+- Double Click on the process to select it.
+
+- In your game, Get in-game, not in a menu.
+
+- Press both of your controller sticks, or the `Inser` key, to make the UEVR menu appear while you're in-game, and reload your plugin, using the `PluginLoader/PluginLoader` menu, so the breakpoint gets hit.
+
+- Go back to your Visual Studio, and you will see that your breakpoint are hit ! Enjoy, and create beautiful things, armed with the power of your C++ debugger.
+
+In order to see the variables in greater detail, in Visual Studio, during debugging, you do these things
+
+Autos While debugging: you can enable 'Autos' which will show you values by every member on your class. Go to menu `Debug->Windows->Autos` to make it appear.
+
+Locals While debugging: you can enable 'Locals' which will show you all variables in the current stack frame. Go to menu `Debug->Windows->Locals` to make it appear.
+
+Watch Although it is a little manually you also can use 'Watch' you can drag and drop any variable to this window or right click then add to watch. Go to menu `Debug->Windows->Watch` to make it appear. Note. You can enable more than one watch window :).
+
+Mouse over Finally you can go over the variable with the mouse and you will see the variable's value.
+
 More coming soon ;-)
