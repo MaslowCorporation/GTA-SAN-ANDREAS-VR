@@ -125,7 +125,6 @@ https://praydog.github.io/uevr-docs/plugins/getting_started.html
 ```
 
 // dllmain.cpp : Defines the entry point for the DLL application.
-#include "pch.h"
 
 #include <memory>
 
@@ -212,7 +211,23 @@ Add this `CJHandsVR/CJHandsVR/Dependencies/uevr` folder to your project's files.
 
 Now, we want to compile a .dll file instead of a .exe file like we did previously.
 
-To do so, Open your CJHandsVR Visual Studio project, then Open `Project/properties` dialog and go to `Configuration Properties/General`. On the right side locate the `Configuration Type` item and make sure it is set to `Dynamic Library`.
+To do so, Open your CJHandsVR Visual Studio project, 
+
+We need to disable precompiled headers in Visual Studio, follow these steps:
+
+1. **Open Project Properties**: Right-click on your project in the Solution Explorer and select "Properties" from the context menu.
+
+2. **Navigate to C/C++**: In the project properties window, expand the "Configuration Properties" node, and then select "C/C++".
+
+3. **Precompiled Headers**: In the C/C++ properties, select the "Precompiled Headers" option.
+
+4. **Set Precompiled Header**: Change the "Precompiled Header" option to "Not Using Precompiled Headers".
+
+5. **Apply Changes**: Click "Apply" or "OK" to save the changes and close the properties window.
+
+Once you've done this, Visual Studio will stop expecting a `pch.h` file and will compile your source files without using precompiled headers. 
+
+then Open `Project/properties` dialog and go to `Configuration Properties/General`. On the right side locate the `Configuration Type` item and make sure it is set to `Dynamic Library`.
 
 Then go to `C++/language` and set the `C++ Language Standard` to `ISO C++17`
 
