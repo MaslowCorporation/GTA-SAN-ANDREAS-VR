@@ -60,7 +60,7 @@ https://youtube.com/clip/Ugkx1A9DVj7hwPEf6L0UNmo9HKyKJQQSzK7Z?si=prmGO1gk3vdw7K2
 
 - Pause the game, and go to the `GRAPHICS` menu.
 
-- Turn ``World Shadow Quality` to `OFF` , to disable shadows, because the in-game shadows are buggy and cause crashes in UEVR (the shadows are displayed in one eye only).
+- Turn `World Shadow Quality` to `OFF` , to disable shadows, because the in-game shadows are buggy and cause crashes in UEVR (the shadows are displayed in one eye only).
 
 - Toggle `Show advanced settings` on, in the UEVR menu, so the `UObjectHook` menu appears.
 
