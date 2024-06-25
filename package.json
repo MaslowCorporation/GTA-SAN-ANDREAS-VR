@@ -1,0 +1,20 @@
+{
+  "name": "gta_san_andreas_fp_github",
+  "version": "1.0.0",
+  "description": "Permet de push ce repo",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "compile-plugin-dll": "g++ -std=c++20 -shared -o UEVRPlugin.dll -I include UEVRPlugin.cpp -llua",
+    "reset-main-branch": "git checkout --orphan latest_branch && git add -A && git commit -am \"First commit ;-)\" && git branch -D main && git branch -m main && git push -f --set-upstream origin main",
+    "first-push": "npm run git-init && git add . && git commit -m \"first commit\" && git branch -M main && git remote add origin https://github.com/MaslowCorporation/GTA-SAN-ANDREAS-VR.git && git push -u origin main",
+    "first-push-dev": "npm run git-init && git add . && git commit -m \"first commit\" && git branch -M main && git remote add origin https://github.com/MaslowCorporation/GTA-SAN-ANDREAS-VR.git && git push -u origin main",
+    "git-init": "rimraf .git && git init",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "(git add . && git commit -m \"I'm a bigger pusher than Ice-T homie !!!\" && git push) || exit 0"
+  },
+  "author": "",
+  "license": "ISC"
+}
