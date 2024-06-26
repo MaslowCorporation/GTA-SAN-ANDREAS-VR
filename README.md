@@ -127,27 +127,6 @@ simply click the `Reset to Default Settings` button in the UEVR menu !
   <img src="https://praydog.github.io/uevr-docs/usage/images/in-game-menu-1.png" alt="GTA San Andreas Logo">
 </p>
 
-### Now the real work is about to begin !
-
-In order to make this VR experience satisfying, we need to implement some motion controls.
-
-Among all the motion controls, the driving motion controls are the most important ones, especially in a game like Grand Theft Auto, 
-where driving is a major part of the experience, so, let's roll our sleeves up and let's figure out how to do this.
-
-We will need to create a UEVR plugin to handle this. 
-
-We can create plugins in C++ or Blueprint, or LUA. Let's create a C++ plugin. It's the simplest way. Lua would be better, but the UE4SS setup can be tedious ;-)
-
-We will also use Cleo Redux, because it is a very useful tool to create plugins for GTA games
-
-Below is the TODO list of the most crucial features we need.
-
-Let's gooooo !!
-
-### Create a UEVR plugin for motion steering (C++)
-
-First create the UEVR plugin that will allow you to drive cars, trucks, and boats, following [this README](./readme_assets/create_uevr_plugin/README.md)
-
 ### Add a VR steering wheel and hands that you can position as you wish (thanks to steam-vr-wheel and vjoy)
 
 First, on the main UEVR menu (not the in-game UEVR menu, the first menu you use to inject to the game) ,
@@ -200,11 +179,11 @@ Okay ! Now, you need to install a tool called [vjoy](https://sourceforge.net/pro
 
 Download and install the latest `vJoySetup.exe` from [this sourceforge.net page](https://sourceforge.net/projects/vjoystick/)
 
-Okay ! Now, you need to download and add the `VRSteeringWheel` UEVR plugin to your UEVR game folder.
+Okay ! Now, you need to download and add the `VRHands` UEVR plugin to your UEVR game folder.
 
-Download the `VRSteeringWheel.dll` and the `libzmq-mt-gd-4_3_5.dll` files from the [Releases page of steam-uevr-wheel](https://github.com/MaslowCorporation/steam-uevr-wheel/releases) ,
+Download the `VRHands.dll` and the `libzmq-mt-gd-4_3_5.dll` files from the [Releases page of steam-uevr-wheel](https://github.com/MaslowCorporation/steam-uevr-wheel/releases) ,
 
-Open your `UEVRInjector.exe` as admin, and click on `Open Global Dir` . It will open a File Explorer to the location where the UEVR game folders are. Locate the `SanAndreas` folder, and copy paste your `VRSteeringWheel.dll` and your `libzmq-mt-gd-4_3_5.dll` files inside the `SanAndreas/plugins` folder.
+Open your `UEVRInjector.exe` as admin, and click on `Open Global Dir` . It will open a File Explorer to the location where the UEVR game folders are. Locate the `SanAndreas` folder, and copy paste your `VRHands.dll` and your `libzmq-mt-gd-4_3_5.dll` files inside the `SanAndreas/plugins` folder.
 
 Mission accomplished ;-) You have installed everything needed to use VR motion controls for cars/trucks/boats !
 
@@ -260,7 +239,7 @@ The crosshairs were imprecise. I then found another fix to get the crosshairs pr
 
 To get things working properly, just follow one of those methods:
 
-1) Via Oculus Link/Airlink (for Meta headset users)
+#### 1) Via Oculus Link/Airlink (for Meta headset users)
 
 - First, start Oculus Link or AirLink. Make sure that SteamVR is not running.
 The reason you want SteamVR to be completely turned off prior to getting in Oculus Link/Airlink, 
@@ -290,7 +269,7 @@ You can use `Load Camera 1` or `Load Camera 2` too. Use one that's blank, to set
 
 - Now, your crosshairs should work properly, AND the steam-vr-wheel mechanism will work properly too ;-)
 
-2) Via Virtual Desktop (for all headset users ;-)
+#### 2) Via Virtual Desktop (for all headset users ;-)
 
 - First, start Virtual Desktop.
 
@@ -320,16 +299,16 @@ You can use `Load Camera 1` or `Load Camera 2` too. Use one that's blank, to set
 
 NOTE: The crosshairs fix ONLY works with OpenXR chosen as the UEVR runtime.
 
-### Create a similar repository for Grand Theft Auto III: Definitive Edition
+### Here's a similar repository for Grand Theft Auto III: Definitive Edition ;-)
 
 ......
 
-### Create a similar repository for Grand Theft Auto Vice City: Definitive Edition
+### Here's a similar repository for Grand Theft Auto Vice City: Definitive Edition ;-)
 
 ......
 
 ### Other fixes and improvements will be added over time. If you can provide help, it will be greatly appreciated, because I'm all alone doing this ;-)
 
-......
+If you want to edit the source code of the UEVR driving plugin, follow [this README](./readme_assets/create_uevr_plugin/README.md)
 
 ### Thank you for existing ;-)

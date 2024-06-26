@@ -1,6 +1,17 @@
 
 ### Let's create a UEVR plugin ;-)
 
+In order to make this VR experience satisfying, we need to implement some motion controls.
+
+Among all the motion controls, the driving motion controls are the most important ones, especially in a game like Grand Theft Auto, 
+where driving is a major part of the experience, so, let's roll our sleeves up and let's figure out how to do this.
+
+We will need to create a [UEVR C++ plugin](https://praydog.github.io/uevr-docs/plugins/getting_started.html) to handle this. 
+
+We can create plugins in C++ or Blueprint, or LUA. Let's create a C++ plugin. It's the simplest way. Lua would be better, but the UE4SS setup can be tedious ;-)
+
+Let's gooooo !!
+
 First, Let's setup our computer for C++ compilation. I assume you're using a Windows computer, so if you don't, Google for C++ setup for your OS.
 
 - Download Visual Studio at
@@ -11,17 +22,11 @@ During the installation, install everything related to C++ Desktop Console. Inst
 
 Create a folder named `VRHands` somewhere in your computer, then create a `C++ Dynamic-Link Library (DLL)` Visual Studio project inside this folder, named `VRHands`. Choose the folder you just created as the `Location` of the newly created project.
 
-Open your `VRHands/VRHands/dllmain.cpp` file, and replace it's code with this code.
-
-A skeletal plugin template can be found here.
-
-https://praydog.github.io/uevr-docs/plugins/getting_started.html
-
-The code below is the full plugin code, ready for action ;-)
+Open your `VRHands/VRHands/dllmain.cpp` file, and replace it's code with this code below.
 
 I added lots of comments so aspiring modders can understand what's going on, and hopefully, getting their hands dirty and improving it, or making something totally different, taking inspiration from it.... The sky is the limit !
 
-[Link to the full plugin code](https://github.com/MaslowCorporation/steam-uevr-wheel/blob/main/dllmain.cpp)
+[Link to the full plugin code, ready for action ;-)](https://github.com/MaslowCorporation/steam-uevr-wheel/blob/main/dllmain.cpp)
 
 Download the latest `Source code (zip)` file at 
 
@@ -44,6 +49,27 @@ and
 
 Include those 2 header files to your C++ project.
 There should now be a `VRHands/VRHands/Dependencies/nlohmann` folder containing `json.hpp` and `json_fwd.hpp` .
+
+Install `vcpkg` [by following this tutorial](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild)
+(
+NOTES: 
+
+- Skip step 2.1 ``Create the Visual Studio project`` , because you already created your VS project.
+
+- At Step 2.2 , Set the `VCPKG_ROOT` variable permanently, and add it to the PATH variable permanently, instead of temporarily.
+
+- At Step 2.3 , run the `vcpkg new --application` command inside the `VRHands` folder. Don't add the `fmt` package, you don't need it.
+
+- Skip Step 3
+
+- At Step 4 , you may need to close and reopen Visual Studio , in order to see the `vcpkg` menu in `Project Properties`.
+
+- Skip Step 5
+)
+
+Install the `cppzmq` library in your ``VRHands`` project, using vcpkg. Run the command `vcpkg add port cppzmq` , inside the `VRHands` folder.
+
+[Link to the cppzmq vckpg page](https://vcpkg.io/en/package/cppzmq)
 
 Now, we want to compile a .dll file instead of the default .exe file that Visual Studio produces.
 
@@ -68,6 +94,15 @@ Then, in the same menu, set the `C++ Language Standard` to `ISO C++20`.
 Click `Apply` to save the changes.
 
 Once you've done all this, press `CTRL + B` to build/compile your UEVR plugin into a .dll file. If everything is OK, your .dll file will be located in `VRHands\x64\Debug\VRHands.dll` !
+
+NOTE: Sometimes, additional DLL files are generated in the ``x64/Debug`` folder of the VS project, following a build/compilation.
+and that those additional DLL files need to be added to the UnrealVRMod/GameFolder/plugins folder, so the plugin can work properly.
+In our case, after a `CTRL + B` compilation, 
+a `VRHands\x64\Debug\VRHands.dll` file (the UEVR plugin) 
+and 
+a `VRHands\x64\Debug\libzmq-mt-gd-4_3_5.dll` file (a .dll file for the cppzmq library) 
+are generated.
+
 
 
 Open your `UEVRInjector.exe` as admin, and click on `Open Global Dir` . It will open a File Explorer to the location where the UEVR game folders are. Locate the `SanAndreas` folder, and copy paste your `VRHands\x64\Debug\VRHands.dll` and your `VRHands\x64\Debug\libzmq-mt-gd-4_3_5.dll` files inside the `SanAndreas/plugins` folder.
