@@ -301,14 +301,14 @@ NOTE: The crosshairs fix ONLY works with OpenXR chosen as the UEVR runtime.
 
 ### Here's a similar repository for Grand Theft Auto III: Definitive Edition ;-)
 
-......
+[Link to GTA 3 VR](https://github.com/MaslowCorporation/GTA-3-VR)
 
 ### Here's a similar repository for Grand Theft Auto Vice City: Definitive Edition ;-)
 
-......
+[Link to GTA Vice City VR](https://github.com/MaslowCorporation/GTA-VICE-CITY-VR)
 
 ### Other fixes and improvements will be added over time. If you can provide help, it will be greatly appreciated, because I'm all alone doing this ;-)
 
-If you want to edit the source code of the UEVR driving plugin, follow [this README](./readme_assets/create_uevr_plugin/README.md)
+If you want to edit the source code of the UEVR driving plugin, follow [this README](https://github.com/MaslowCorporation/steam-uevr-wheel/blob/main/readme_assets/create_uevr_plugin/README.md)
 
 ### Thank you for existing ;-)
