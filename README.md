@@ -192,16 +192,14 @@ Mission accomplished ;-) You have installed everything needed to use VR motion c
 
 Using the VR steering wheel in-game is very simple.
 
-- FIrst, press the right VR grip button of your VR controller, to get in `Wheel Setup` mode.
+- FIrst, press `Shift Key` on your keyboard, to get in `Wheel Setup` mode.
 This mode allows you to position and resize the wheel the way you want it to be.
 Press the left and right VR trigger buttons, and move your hands around and you'll see the wheel following your hand movements.
 Get your hands apart from each other, and you'll see the wheel growing bigger, and vice versa when you get your hands closer together.
 
-- Once you're satisfied with the wheel size and position, press the right VR grip button once, to get in `Wheel Visible` mode.
+- Once you're satisfied with the wheel size and position, press `Shift Key` on your keyboard, to get in `Wheel Visible` mode.
 Now your wheel is actually ready to work ;-)
-Press your left controller VR grip button to turn/steer the wheel. 
-Don't use the right VR grip button to steer, because this button is used to change the wheel mode.
-I will change this behaviour later, so both grip buttons can be used to steer ;-)
+Press your left or right controller VR grip button to turn/steer the wheel. ;-)
 
 (IMPORTANT !!) If the wheel is not properly aligned in-game, simply [recenter your SteamVR position](https://www.roadtovr.com/steamvr-recenter-reorient-playspace-forward-update/)
 On Oculus headsets, press the left VR controller's menu button, to make the SteamVR VR menu appear,
