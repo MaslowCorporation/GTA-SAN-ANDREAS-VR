@@ -43,27 +43,13 @@ and we want the gamepad specific screen)
 are also used for shooting and handbraking, in the default `Modern` layout,
 so choosing the `Modern Alt` layout allows us to grab the steering wheel using the left VR grip button, without shooting like a madman ;-)
 
-### Install the First Person Car Mod 
+### Install Cleo Redux 
 
-First we need to install Cleo Redux. Download and run the `cleo_redux_setup.exe` installer, located at
+We need to install Cleo Redux. Download and run the `cleo_redux_setup.exe` installer, located at
 
 https://re.cleo.li/
 
 #### IMPORTANT: During the Cleo Redux installation, you must select the copied folder you created for your game as the installation folder !!!!
-
-Once Cleo Redux is installed, we will install the first person car mod from Andre500, located here
-
-https://www.gtainside.com/en/sanandreas-definitive-edition/mods/172436-first-person-view-in-the-car
-
-Download the mod, extract the .rar archive to a folder, then copy/paste the contents of the extracted folder, to the folder
-
-`Gameface\Binaries\Win64\CLEO` of your GTA SAN ANDREAS game
-
-This folder is located inside your copied game folder, where you just installed CLEO REDUX ;-)
-
-Now you can start your game, and test the first person mod ! Simply activate/deactivate the First Person view with the ``P`` key.
-
-NOTE: [motorcycles don't have first person view, but you can always place the camera inside the player's head, thanks to UEVR ;-)](#uevr-camera-positioning)
 
 ### UEVR Setup
 
@@ -103,6 +89,10 @@ It should normally be called `SanAndreas (pid: xxxx) (Grand Theft Auto: San Andr
 - Now, the game is projected into your headset. To toggle the UEVR Menu ON/OFF, Press `Inser` on your keyboard, or `L3 + R3` on your gamepad.
 
 (Please note that the UEVR menu toggle works only with a PC gamepad, not with the VR controller, at least in my case, using a Oculus Quest 2. Yours may vary.)
+
+### Install the 6DOF First Person UEVR mod
+
+See https://www.nexusmods.com/grandtheftautothetrilogy/mods/922
 
 #### UEVR Camera positioning
 
