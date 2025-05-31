@@ -100,6 +100,23 @@ Recenter Vorpx: press `L1` (after following setup instructions)
 
 ### TODO
 
+- [ ] utilise joy2key ou similaire pour set in car:
+L2 as brake/reverse
+R2 as accelerate, 
+L1 as handbrake
+
+tip: In <root>/GInputSA.ini change ControlsSet=1 to ControlsSet=2.
+
+
+in the game settings
+
+- [ ] utilise joy2key ou similaire pour set on foot:
+
+set L2 as aim 
+set R2 as shoot, 
+
+in the game settings
+
 - [ ] Install vjoy
 
 - [ ] Test steam-uevr-wheel inside GTA San Andreas vorpx
