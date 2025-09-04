@@ -1,0 +1,69 @@
+Metadata-Version: 2.4
+Name: openvr
+Version: 2.12.1401
+Summary: Unofficial python bindings for Valve OpenVR SDK
+Home-page: https://github.com/cmbruns/pyopenvr
+Download-URL: https://github.com/cmbruns/pyopenvr/tarball/2.12.1401
+Author: Christopher Bruns and others
+Author-email: cmbruns@rotatingpenguin.com
+License: BSD
+Keywords: openvr valve htc vive vr virtual reality 3d graphics
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Microsoft :: Windows :: Windows 7
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=3.9
+License-File: LICENSE
+Provides-Extra: glfw
+Requires-Dist: numpy; extra == "glfw"
+Requires-Dist: PyOpenGL; extra == "glfw"
+Requires-Dist: glfw; extra == "glfw"
+Provides-Extra: opengl
+Requires-Dist: numpy; extra == "opengl"
+Requires-Dist: PyOpenGL; extra == "opengl"
+Provides-Extra: pyqt5
+Requires-Dist: numpy; extra == "pyqt5"
+Requires-Dist: PyOpenGL; extra == "pyqt5"
+Requires-Dist: PyQt5; extra == "pyqt5"
+Requires-Dist: jinja2; extra == "pyqt5"
+Provides-Extra: pyside2
+Requires-Dist: numpy; extra == "pyside2"
+Requires-Dist: PyOpenGL; extra == "pyside2"
+Requires-Dist: PySide2; extra == "pyside2"
+Provides-Extra: pyside6
+Requires-Dist: numpy; extra == "pyside6"
+Requires-Dist: PyOpenGL; extra == "pyside6"
+Requires-Dist: PySide6; extra == "pyside6"
+Provides-Extra: sdl2
+Requires-Dist: numpy; extra == "sdl2"
+Requires-Dist: PyOpenGL; extra == "sdl2"
+Requires-Dist: PySDL2; extra == "sdl2"
+Provides-Extra: wx
+Requires-Dist: numpy; extra == "wx"
+Requires-Dist: PyOpenGL; extra == "wx"
+Requires-Dist: wxPython; extra == "wx"
+Provides-Extra: generate
+Requires-Dist: clang; extra == "generate"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: provides-extra
+Dynamic: requires-python
+Dynamic: summary
+
+Valve OpenVR SDK python bindings using ctypes
